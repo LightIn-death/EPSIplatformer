@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1584718956 source:c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\main.cpp
+	<iostream>
+	<cstdio>
+	<windows.h>
+	<cmath>
+	"Fenetre.h"
+	"Game.h"
+
+1584720813 source:c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\src\game.cpp
+	"Game.h"
+	"iostream"
+	"PlayerController.h"
+
+1584718993 c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\include\game.h
+	"PlayerController.h"
+
+1584709400 source:c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\src\fenetre.cpp
+	"Fenetre.h"
+	<graphics.h>
+	<windows.h>
+	<iostream>
+	<cstdio>
+	<cmath>
+
+1584708833 c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\include\fenetre.h
+
+1584710219 c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\include\playercontroller.h
+
+1584710499 source:c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\src\playercontroller.cpp
+	"PlayerController.h"
+	<windows.h>
+
+1584720840 source:c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\src\player.cpp
+	"Player.h"
+
+1584721355 c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\include\player.h
+	"structs.h"
+
+1584721331 c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\include\structs.h
+
