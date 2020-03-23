@@ -3,7 +3,6 @@ using namespace std;
 #include <cstdio>
 #include <windows.h>
 #include <cmath>
-#include "Fenetre.h"
 #include "Game.h"
 
 
@@ -11,13 +10,43 @@ using namespace std;
 
 int main()
 {
-    Fenetre* canvas;
-    canvas = new Fenetre();
+
     Game* game;
     game = new Game();
 
 
     while (game->isRunning() ){game->_update();}
+
+
+    return 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -70,5 +99,7 @@ int gravity = 9.8;
     //getch();
 
 
-    return 1;
-}
+
+
+
+

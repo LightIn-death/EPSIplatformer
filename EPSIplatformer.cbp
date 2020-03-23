@@ -38,12 +38,12 @@
 		<Unit filename="include/Game.h" />
 		<Unit filename="include/Player.h" />
 		<Unit filename="include/PlayerController.h" />
+		<Unit filename="include/structs.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Fenetre.cpp" />
 		<Unit filename="src/Game.cpp" />
 		<Unit filename="src/Player.cpp" />
 		<Unit filename="src/PlayerController.cpp" />
-		<Unit filename="structs.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

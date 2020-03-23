@@ -1,5 +1,8 @@
 #include "PlayerController.h"
 #include <windows.h>
+#include "structs.h"
+#include "Player.h"
+
 
 
 
@@ -15,49 +18,46 @@ PlayerController::~PlayerController()
 }
 
 
-void PlayerController::checkEvent(){
+void PlayerController::checkEvent(Player* Joueur)
+{
 
-    int X = 0;
-    int Y=0;
-    int SPEED=0;
+    Vector2 velo;
 
-
-if(GetAsyncKeyState(VK_LEFT)){
-            X-=SPEED;
-        } else
-        if(GetAsyncKeyState(VK_RIGHT)){
-            X+=SPEED;
-        } else
-        if(GetAsyncKeyState(VK_UP)){
-            Y-=SPEED;
-        } else
-        if(GetAsyncKeyState(VK_DOWN)){
-            Y+=SPEED;
-        }
-         else    if(GetAsyncKeyState(VK_ESCAPE)){
-            exit(1);
-        }
+    velo.x = 0;
+    velo.y = 0;
+    int SPEED=20;
 
 
-        /*
-        if(X > getwindowwidth()){
-            X = 0;
-        }else
-        if(X < 0){
-            X =  getwindowwidth();
-        }else
+    if(GetAsyncKeyState(VK_LEFT))
+    {
+        velo.x-=SPEED;
+    }
+    if(GetAsyncKeyState(VK_RIGHT))
+    {
+        velo.x+=SPEED;
+    }
+    if(GetAsyncKeyState(VK_UP))
+    {
+        velo.y-=SPEED;
+    }
+    if(GetAsyncKeyState(VK_DOWN))
+    {
+        velo.y+=SPEED;
+    }
+    if(GetAsyncKeyState(VK_ESCAPE))
+    {
+        exit(1);
+    }
+
+
+    if (velo.x !=0 | velo.y !=0)
+    {
+        Joueur->set_Velocity(velo);
+        Joueur->_move();
 
 
 
-        if(Y > getwindowheight()){
-            Y = 0;
-        }else
-
-        if(Y < 0 ){
-            Y =  getwindowheight();
-        }
-
-        */
+    }
 
 }
 

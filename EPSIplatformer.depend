@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1584718956 source:c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\main.cpp
+1584725945 source:c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\main.cpp
 	<iostream>
 	<cstdio>
 	<windows.h>
@@ -7,13 +7,14 @@
 	"Fenetre.h"
 	"Game.h"
 
-1584720813 source:c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\src\game.cpp
+1584974557 source:c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\src\game.cpp
 	"Game.h"
 	"iostream"
 	"PlayerController.h"
 
-1584718993 c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\include\game.h
+1584975848 c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\include\game.h
 	"PlayerController.h"
+	"Player.h"
 
 1584709400 source:c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\src\fenetre.cpp
 	"Fenetre.h"
@@ -25,17 +26,70 @@
 
 1584708833 c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\include\fenetre.h
 
-1584710219 c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\include\playercontroller.h
+1584975865 c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\include\playercontroller.h
+	"Player.h"
 
 1584710499 source:c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\src\playercontroller.cpp
 	"PlayerController.h"
 	<windows.h>
 
-1584720840 source:c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\src\player.cpp
+1584975447 source:c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\src\player.cpp
 	"Player.h"
+	<graphics.h>
 
-1584721355 c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\include\player.h
+1584974842 c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\include\player.h
 	"structs.h"
 
 1584721331 c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\include\structs.h
+
+1584978424 source:c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\main.cpp
+	<iostream>
+	<cstdio>
+	<windows.h>
+	<cmath>
+	"Game.h"
+
+1584978059 c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\include\fenetre.h
+	"structs.h"
+
+1584981692 c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\include\game.h
+	<time.h>
+	"PlayerController.h"
+	"Player.h"
+	"Fenetre.h"
+
+1584977467 c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\include\playercontroller.h
+	"Player.h"
+
+1584978538 c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\include\player.h
+	"structs.h"
+
+1584721331 c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\include\structs.h
+
+1584981113 source:c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\src\fenetre.cpp
+	"Fenetre.h"
+	<graphics.h>
+	<windows.h>
+	<iostream>
+	<cstdio>
+	<cmath>
+	"structs.h"
+
+1584981446 source:c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\src\game.cpp
+	"Game.h"
+	<time.h>
+	"iostream"
+	"PlayerController.h"
+	"Player.h"
+
+1584979419 source:c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\src\player.cpp
+	"Player.h"
+	<graphics.h>
+	"structs.h"
+
+1584977472 source:c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\src\playercontroller.cpp
+	"PlayerController.h"
+	<windows.h>
+	"structs.h"
+	"Player.h"
 
