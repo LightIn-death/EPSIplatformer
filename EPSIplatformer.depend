@@ -42,54 +42,113 @@
 
 1584721331 c:\users\breva\serveur\back - snotib\cours\c\cpp\epsiplatformer\include\structs.h
 
-1584978424 source:c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\main.cpp
+1585237824 source:c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\main.cpp
 	<iostream>
 	<cstdio>
 	<windows.h>
 	<cmath>
 	"Game.h"
 
-1584978059 c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\include\fenetre.h
-	"structs.h"
+1585241794 c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\include\fenetre.h
+	"Vector2.h"
 
-1584981692 c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\include\game.h
+1585677608 c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\include\game.h
 	<time.h>
+	<cstdio>
+	<iostream>
+	<windows.h>
 	"PlayerController.h"
 	"Player.h"
 	"Fenetre.h"
+	<vector>
+	"Vector2.h"
+	"Map.h"
 
-1584977467 c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\include\playercontroller.h
+1587657939 c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\include\playercontroller.h
 	"Player.h"
+	<vector>
+	"Vector2.h"
+	"Map.h"
 
-1584978538 c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\include\player.h
-	"structs.h"
+1587657742 c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\include\player.h
+	"Vector2.h"
+	"Entity.h"
+	"RayCast2D.h"
+	<vector>
+	"Vector2.h"
+	"Map.h"
 
-1584721331 c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\include\structs.h
+1585233235 c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\include\structs.h
 
-1584981113 source:c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\src\fenetre.cpp
+1585726115 source:c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\src\fenetre.cpp
 	"Fenetre.h"
 	<graphics.h>
 	<windows.h>
 	<iostream>
 	<cstdio>
 	<cmath>
-	"structs.h"
+	"Vector2.h"
 
-1584981446 source:c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\src\game.cpp
+1587657396 source:c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\src\game.cpp
 	"Game.h"
 	<time.h>
 	"iostream"
 	"PlayerController.h"
 	"Player.h"
+	"Map.h"
+	<graphics.h>
 
-1584979419 source:c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\src\player.cpp
+1587657809 source:c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\src\player.cpp
 	"Player.h"
 	<graphics.h>
-	"structs.h"
+	"Vector2.h"
+	"RayCast2D.h"
+	<vector>
+	"Vector2.h"
+	"Map.h"
+	<iostream>
 
-1584977472 source:c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\src\playercontroller.cpp
+1587657699 source:c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\src\playercontroller.cpp
 	"PlayerController.h"
 	<windows.h>
-	"structs.h"
+	"Vector2.h"
 	"Player.h"
+	<vector>
+	"Vector2.h"
+	"Map.h"
+
+1587655003 source:c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\src\vector2.cpp
+	"Vector2.h"
+	<cmath>
+	<stdlib.h>
+	<iostream>
+	<stdlib.h>
+
+1587650409 c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\include\vector2.h
+
+1585675320 c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\include\entity.h
+	"Vector2.h"
+
+1587655018 source:c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\src\raycast2d.cpp
+	"RayCast2D.h"
+	"Vector2.h"
+	<iostream>
+	"Map.h"
+
+1587650354 c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\include\raycast2d.h
+	"Vector2.h"
+	"Map.h"
+	<vector>
+
+1585644693 source:c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\src\entity.cpp
+	"Entity.h"
+
+1587652958 source:c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\src\map.cpp
+	"Map.h"
+	"Vector2.h"
+	<graphics.h>
+
+1587562020 c:\users\breva\serveur\back - snotib\projects\c\cpp\epsiplatformer\include\map.h
+	"Vector2.h"
+	"Entity.h"
 

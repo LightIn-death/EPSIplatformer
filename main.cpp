@@ -14,8 +14,7 @@ int main()
     Game* game;
     game = new Game();
 
-
-    while (game->isRunning() ){game->_update();}
+    while (game->isRunning() ){game->update();}
 
 
     return 1;

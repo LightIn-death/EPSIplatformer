@@ -5,9 +5,9 @@
 
 
 
-typedef struct Vector2 Vector2;
+typedef struct VectorOLD VectorOLD;
 
-struct Vector2 {
+struct VectorOLD {
     double x;
     double y;
 };

@@ -1,26 +1,36 @@
 #ifndef PLAYER_H
 #define PLAYER_H
-#include "structs.h"
+#include "Vector2.h"
+#include "Entity.h"
+#include "RayCast2D.h"
+ #include <vector>
+#include "Vector2.h"
+#include "Map.h"
+using namespace std;
 
-
-class Player
+class Player : public Entity
 {
 
 private:
-    Vector2 position;
-    Vector2 velocity;
-    int SPEED;
+    Vector2* velocity;
+    int SPEED = 50;
     int LIFE;
     int JUMP;
-    int GRAVITY;
+    int GRAVITY = 1;
+    Vector2 fall = Vector2();
+
+
 
 public:
     Player();
     virtual ~Player();
-    void set_Velocity(Vector2 velo);
-    Vector2 _move();
+    void set_Velocity(Vector2* velo,double deltaT);
+    Vector2* _move( );
     void _show();
-    void _reverse( Vector2 fenetre_size);
+    void _reverse( Vector2* fenetre_size);
+    void gravity();
+    Vector2 collide(vector<Map*> carte);
+    Vector2 get_position();
 
 protected:
 
