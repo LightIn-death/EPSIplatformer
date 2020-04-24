@@ -3,20 +3,46 @@ using namespace std;
 #include <cstdio>
 #include <windows.h>
 #include <cmath>
-#include "Game.h"
+#include <SDL2/SDL.h>
+#include <iostream>
+#include "include/Game.h"
 
 
 
 
-int main()
+int main(int argc, char **argv)
 {
+    const int FPS = 60;
+    const int frameDelay = 1000/FPS;
+    Uint32 frameStart;
+    int frameTime;
+
+
+
 
     Game* game;
     game = new Game();
+    cout << "init full" << endl;
+    while (game->isRunning() )
+    {
 
-    while (game->isRunning() ){game->update();}
+        frameStart = SDL_GetTicks();
+            game->update();
+
+            frameTime = SDL_GetTicks() - frameStart;
+
+            if (frameDelay>frameTime){SDL_Delay(frameDelay - frameTime);}
 
 
+
+
+    }
+
+
+
+
+
+        cout << "jeux finit" << endl;
     return 1;
 }
 
@@ -26,79 +52,74 @@ int main()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
-    int x1 = 100;                   //x-position of fish 1
-//    int y1 = getmaxheight()/2;      //y-position of fish 1
+#include <iostream>
+#include <SDL2/SDL.h>
 
-  //  int X = getwindowwidth()/2;
-   // int Y = getwindowheight()/2;
-    int SPEED = 6;
+void DrawCircle(SDL_Renderer * renderer, int32_t centreX, int32_t centreY, int32_t radius)
+{
+   const int32_t diameter = (radius * 2);
 
-int gravity = 9.8;
+   int32_t x = (radius - 1);
+   int32_t y = 0;
+   int32_t tx = 1;
+   int32_t ty = 1;
+   int32_t error = (tx - diameter);
 
-    // Infinite Loop of swimming
-    while(1)
-    {
+   while (x >= y)
+   {
+      //  Each of the following renders an octant of the circle
+      SDL_RenderDrawPoint(renderer, centreX + x, centreY - y);
+      SDL_RenderDrawPoint(renderer, centreX + x, centreY + y);
+      SDL_RenderDrawPoint(renderer, centreX - x, centreY - y);
+      SDL_RenderDrawPoint(renderer, centreX - x, centreY + y);
+      SDL_RenderDrawPoint(renderer, centreX + y, centreY - x);
+      SDL_RenderDrawPoint(renderer, centreX + y, centreY + x);
+      SDL_RenderDrawPoint(renderer, centreX - y, centreY - x);
+      SDL_RenderDrawPoint(renderer, centreX - y, centreY + x);
 
-    setcolor(RED);
-    circle(X,Y,80);
+      if (error <= 0)
+      {
+         ++y;
+         error += ty;
+         ty += 2;
+      }
 
+      if (error > 0)
+      {
+         --x;
+         tx += 2;
+         error += (tx - diameter);
+      }
+   }
+}
 
-    rectangle(0,0,2,2);
-
-
-        delay(1);
-        cleardevice();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
-
-    /*/
-
-    //getch();
-
-
-
-
+int main(int argc,char* argv[]){
+SDL_Init(SDL_INIT_EVERYTHING);
 
 
+SDL_Window* window;
+SDL_Renderer* renderer;//Déclaration du renderer
+
+
+
+SDL_Rect rectangle = {0,0,250,250};
+
+
+
+    SDL_RenderClear(renderer);
+
+    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+    //SDL_RenderDrawRect(renderer, &rect);
+    SDL_RenderFillRect(renderer, &rectangle);
+    DrawCircle(renderer,150,150,200);
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+
+
+    SDL_RenderPresent(renderer);
+
+SDL_Delay(5000);
+SDL_Quit();
+return EXIT_SUCCESS;
+}
+*/

@@ -12,17 +12,18 @@ using namespace std;
 
 PlayerController::PlayerController()
 {
-    //ctor
 }
 
 PlayerController::~PlayerController()
 {
-    //dtor
 }
 
 
 void PlayerController::checkEvent(Player* Joueur,double deltaT,vector<Map*> carte )
 {
+    SDL_Event event;
+    SDL_PollEvent(&event);
+
 
     Vector2* velo = new Vector2();
     RayCast2D legs=  RayCast2D((Joueur->get_position()),Vector2(0,2).normalize(),30);
@@ -38,7 +39,8 @@ void PlayerController::checkEvent(Player* Joueur,double deltaT,vector<Map*> cart
 
     if(!wall_left.check_for_collision(carte) )
     {
-        if(GetAsyncKeyState(VK_LEFT))
+        //if ( event.key.keysym.sym == SDLK_LEFT )
+       if(GetAsyncKeyState(VK_LEFT))
         {
             velo->x-=SPEED;
         }
@@ -50,6 +52,7 @@ void PlayerController::checkEvent(Player* Joueur,double deltaT,vector<Map*> cart
 
     if(!wall_right.check_for_collision(carte) )
     {
+        //if ( event.key.keysym.sym == SDLK_RIGHT )
         if(GetAsyncKeyState(VK_RIGHT))
         {
             velo->x+=SPEED;
@@ -64,6 +67,7 @@ void PlayerController::checkEvent(Player* Joueur,double deltaT,vector<Map*> cart
     if(!legs.check_for_collision(carte) )
     {
         Joueur->gravity();
+       // if ( event.key.keysym.sym == SDLK_DOWN )
         if(GetAsyncKeyState(VK_DOWN))
         {
             velo->y+=SPEED;
@@ -76,17 +80,19 @@ void PlayerController::checkEvent(Player* Joueur,double deltaT,vector<Map*> cart
             velo->y = -1;
         }
 
+
+        //if ( event.key.keysym.sym == SDLK_UP && !this->is_jumping)
         if(GetAsyncKeyState(VK_UP) && !this->is_jumping)
         {
             this->is_jumping = true;
-            velo->y-=SPEED;
+            velo->y-=SPEED ;
 
         }
 
 
 
     if(head_bonker.check_for_collision(carte) )
-    { velo->y = 1;}
+    { velo->y = 1;}//cout << "HEAD BONK"<<endl;}
 
 
 
@@ -96,8 +102,8 @@ void PlayerController::checkEvent(Player* Joueur,double deltaT,vector<Map*> cart
 
 
 
-
-    if(GetAsyncKeyState(VK_ESCAPE))
+//if ( event.key.keysym.sym == SDLK_ESCAPE )
+if(GetAsyncKeyState(VK_ESCAPE) || event.window.event == SDL_WINDOWEVENT_CLOSE)
     {
         exit(1);
     }
@@ -108,6 +114,8 @@ void PlayerController::checkEvent(Player* Joueur,double deltaT,vector<Map*> cart
         Joueur->set_Velocity(velo,deltaT);
 
     }
+
+
 
 }
 

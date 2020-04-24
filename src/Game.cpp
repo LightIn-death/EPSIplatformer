@@ -13,13 +13,13 @@ using namespace std;
 Game::Game()
 {
     //ctor
-    this->canvas = new Fenetre();
+    this->canvas = new Fenetre(1920,1000);
     this->controler = new PlayerController();
-    this->joueur = new Player();
-    this->last_time = clock();
-    this->fenetre_size = new Vector2();
-    this->fenetre_size = this->canvas->get_fenetre_size();
+    this->joueur = new Player(this->canvas);
     this->initMap();
+    this->last_time = clock();
+    this->fenetre_size = this->canvas->get_fenetre_size();
+
 }
 
 Game::~Game()
@@ -28,21 +28,15 @@ Game::~Game()
 
 void Game::update()
 {
-
-
 this->controler->checkEvent(this->joueur,this->deltaT(),this->carte);
-
-
 this->joueur->_move();
-
-
 this->joueur->_reverse(this->fenetre_size);
-
-
+this->canvas->clean();
 this->joueur->_show();
 this->showMap();
+this->canvas->render();
 this->last_time = clock();
-this->canvas->refresh();
+
 }
 
 
@@ -77,56 +71,59 @@ void Game::initMap()
     {
 
         Map* tile;
-        tile =new Map();
-
+        tile =new Map(this->canvas->renderer);
         Vector2* taille;
         Vector2* position;
-        taille =new Vector2();
-        position =new Vector2();
-
-
-
-
-        position->x = 100 * i;
-        position->y = 1000;
-
-
-
-        taille->x = 100;
-        taille->y = 100;
-
+        taille =new Vector2(100,100);
+        position =new Vector2(100 * i,1000);
         tile->set_taille(taille);
         tile->set_position(position);
-
-
-
         this->carte.push_back(tile);
 
     }
 
-            Map* tile;
-        tile =new Map();
-
+        Map* tile;
+        tile =new Map(this->canvas->renderer);
         Vector2* taille;
         Vector2* position;
-        taille =new Vector2();
-        position =new Vector2();
-
-
-
-        position->x = 1000;
-        position->y = 600;
-
-
-
-        taille->x =  200;
-        taille->y =  200;
-
+        taille =new Vector2(200,200);
+        position =new Vector2(1000,600);
         tile->set_taille(taille);
         tile->set_position(position);
+        this->carte.push_back(tile);
 
 
 
+
+        tile =new Map(this->canvas->renderer);
+        taille =new Vector2(300,30);
+        position =new Vector2(200,800);
+        tile->set_taille(taille);
+        tile->set_position(position);
+        this->carte.push_back(tile);
+
+
+        tile =new Map(this->canvas->renderer);
+        taille =new Vector2(300,30);
+        position =new Vector2(200,800);
+        tile->set_taille(taille);
+        tile->set_position(position);
+        this->carte.push_back(tile);
+
+
+        tile =new Map(this->canvas->renderer);
+        taille =new Vector2(300,30);
+        position =new Vector2(1200,600);
+        tile->set_taille(taille);
+        tile->set_position(position);
+        this->carte.push_back(tile);
+
+
+        tile =new Map(this->canvas->renderer);
+        taille =new Vector2(20,400);
+        position =new Vector2(50,200);
+        tile->set_taille(taille);
+        tile->set_position(position);
         this->carte.push_back(tile);
 
 

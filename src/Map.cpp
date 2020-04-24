@@ -1,12 +1,13 @@
 #include "Map.h"
 #include "Vector2.h"
-#include <graphics.h>
+#include <SDL2/SDL.h>
 
 
 
-Map::Map()
+Map::Map(SDL_Renderer* render)
 {
-    //ctor
+
+this->renderer = render;
 }
 
 Map::~Map()
@@ -16,8 +17,9 @@ Map::~Map()
 
 void Map::afficher()
 {
-    setcolor(GREEN);
-    rectangle(this->position->x,this->position->y,this->position->x+ this->taille->x,this->position->y + this->taille->y);
+    SDL_SetRenderDrawColor(renderer,255,255,255,255);
+SDL_Rect rectangle = {this->position->x,this->position->y,this->taille->x,this->taille->y};
+SDL_RenderFillRect(renderer, &rectangle);
 }
 
 

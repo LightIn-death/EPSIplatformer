@@ -47,7 +47,7 @@ bool RayCast2D::check_for_collision(vector<Map*> carte,double step)
             if(state_position.point_is_inside(*(tile.get_position()),*(tile.get_taille())))
             {
                 this->CollisionPoint = state_position;
-                cout << "Collision en > "<< state_position.x << " : " << state_position.y << endl;
+               // cout << "Collision en > "<< state_position.x << " : " << state_position.y << endl;
                 return true;
             }
         }

@@ -87,4 +87,25 @@ bool Vector2::point_is_inside(Vector2 rect, Vector2 rect_size)
 
 
 
+      Vector2 operator+( Vector2 v1,const Vector2 v2){return v1.Add(v2);}
+      Vector2 operator-( Vector2 v1,const Vector2 v2){return v1.Sub(v2);}
+      Vector2 operator*( Vector2 v1,const Vector2 v2){return v1.Mult(v2);}
+      Vector2 operator/( Vector2 v1,const Vector2 v2){return v1.Div(v2);}
+
+
+    Vector2 Vector2::operator+=(const Vector2 vect){this->Add(vect);}
+    Vector2 Vector2::operator-=(const Vector2 vect){this->Sub(vect);}
+    Vector2 Vector2::operator*=(const Vector2 vect){this->Mult(vect);}
+    Vector2 Vector2::operator/=(const Vector2 vect){this->Div(vect);}
+
+
+
+    Vector2 Vector2::Add(const Vector2 vect){return Vector2((this->x + vect.x),(this->y + vect.y));}
+    Vector2 Vector2::Sub(const Vector2 vect){return Vector2((this->x - vect.x),(this->y - vect.y));}
+    Vector2 Vector2::Mult(const Vector2 vect){return Vector2((this->x * vect.x),(this->y * vect.y));}
+    Vector2 Vector2::Div(const Vector2 vect){return Vector2((this->x / vect.x),(this->y / vect.y));}
+
+
+          bool operator==(const Vector2 v1,const Vector2 v2){if(v1.x == v2.x && v1.y == v2.y ){return true;}else {return 0;} }
+
 

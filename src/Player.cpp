@@ -8,9 +8,11 @@
 #include <iostream>
 using namespace std;
 
-Player::Player()
+Player::Player(Fenetre* canvas)
 {
-    //ctor
+
+this->canvas = canvas;
+this->renderer = canvas->renderer;
     this->position = new Vector2() ;
     this->velocity= new Vector2() ;
     this->position->x = 400;
@@ -48,8 +50,8 @@ this->velocity->y += this->GRAVITY;
 Vector2* Player::_move()
 {
 
-    this->position->x += this->velocity->x ;
-    this->position->y += this->velocity->y ;
+   this->position->x += this->velocity->x ;
+   this->position->y += this->velocity->y ;
     return this->position;
 }
 
@@ -80,9 +82,9 @@ void Player::_reverse( Vector2* fenetre_size)
 
 void Player::_show()
 {
-    setfillstyle(1,4);
-    setcolor(RED);
-    circle(this->position->x,this->position->y,20);
-    setcolor(WHITE);
+ SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+
+    this->canvas->DrawCircle(renderer,this->position->x,this->position->y,20);
+     SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
 
 }

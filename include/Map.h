@@ -3,11 +3,12 @@
 
 #include "Vector2.h"
 #include "Entity.h"
+#include <SDL2/SDL.h>
 
 class Map : public Entity
 {
     public:
-        Map();
+        Map(SDL_Renderer* render);
         virtual ~Map();
         void afficher();
        void set_position(Vector2* value);
@@ -19,6 +20,7 @@ class Map : public Entity
     protected:
 
     private:
+SDL_Renderer* renderer;
 
         Vector2* position;
         Vector2* taille;

@@ -1,2 +1,0 @@
-# EPSIplatformer
-Cpp first project
